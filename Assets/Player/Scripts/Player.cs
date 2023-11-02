@@ -41,8 +41,8 @@ public class Player : MonoBehaviour
 
         // Clamp the spaceship's position within camera bounds
         Vector3 clampedPosition = transform.position;
-        clampedPosition.x = Mathf.Clamp(clampedPosition.x, -cameraWidth, cameraWidth);
-        clampedPosition.y = Mathf.Clamp(clampedPosition.y, -cameraHeight, cameraHeight);
+        clampedPosition.x = Mathf.Clamp(clampedPosition.x, -cameraWidth + 0.5f, cameraWidth - 0.5f);
+        clampedPosition.y = Mathf.Clamp(clampedPosition.y, -cameraHeight + 0.5f, cameraHeight - 0.5f);
         transform.position = clampedPosition;
 
         // Shooting
